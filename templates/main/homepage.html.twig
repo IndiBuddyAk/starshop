@@ -6,16 +6,15 @@
 <h1><strong>Starshop</strong>: your monopoly-busting option for Starship parts!</h1>
 
 <div>
-    Browse through {{ numberOfStarships }} starships! <br>
     String return {{ "numberOfStarships" }} <br>
-    Math return {{ numberOfStarships*10 }} <br>
+    Math return {{ ships|length*10 }} <br>
 
-    {% if numberOfStarships > 400 %}
-        <h1><strong>Starshop</strong>: your monopoly-busting option for Starship parts!</h1>
+    Browse through {{ ships|length * 10 }} starships! <br>
 
-        <div>
-            Browse through {{ numberOfStarships }} starships!
-        </div>
+    {% if ships|length > 2 %}
+        <p> 
+            That's a shipload of ships!
+        </p>        
     {% endif %}
     <br><br>
     <table>
